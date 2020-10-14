@@ -1,0 +1,9 @@
+<nz-list nzBordered nzSize="small">
+  <nz-list-header>Header</nz-list-header>
+  <nz-list-item *ngFor="let item of data; let i = index">
+    <nz-list-item-meta-title>
+      <div style="cursor: pointer;" (dblclick)="tableChange()">{{ i }}</div>
+    </nz-list-item-meta-title>
+    {{item}}</nz-list-item>
+  <nz-list-footer>Footer</nz-list-footer>
+</nz-list>
