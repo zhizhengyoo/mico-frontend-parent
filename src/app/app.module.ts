@@ -12,6 +12,7 @@ import { App3Module } from 'micro-app3';
 import { App4Module } from 'micro-app4';
 import { RouteReuseStrategy } from '@angular/router';
 import { AppReuseStrategy } from './core/app-reuse-strategy';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { AppReuseStrategy } from './core/app-reuse-strategy';
     App3Module,
     // App2Module,
     App4Module,
+    BrowserAnimationsModule,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

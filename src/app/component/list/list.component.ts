@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class ListComponent implements OnInit, OnDestroy {
 
   data = [
     'Racing car sprays burning fuel into crowd.',
@@ -19,6 +19,10 @@ export class ListComponent implements OnInit {
   constructor(
     private router: Router,
   ) { }
+
+  ngOnDestroy(): void {
+    console.log('ListComponent ngOnDestroy')
+  }
 
   ngOnInit(): void {
   }

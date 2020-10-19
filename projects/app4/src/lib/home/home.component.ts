@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,7 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
 
   @Input() name: string;
 
@@ -35,6 +35,10 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private _activatedRoute: ActivatedRoute,
   ) { }
+
+  ngOnDestroy(): void {
+    console.log('app4 home ngOnDestroy');
+  }
 
   ngOnInit(): void {
   }

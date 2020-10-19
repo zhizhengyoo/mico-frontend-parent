@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './component/list/list.component';
 import { DetailsComponent } from './component/details/details.component';
 import { HomeComponent, Page1Component, App4Component } from 'app4';
+import { App3Component } from 'micro-app3';
 // import { TableComponent } from 'micro-app2';
 // import { AppCompon} from 'module'
 
@@ -22,6 +23,9 @@ const routes: Routes = [{
   path: 'app4home',
   component: App4Component,
   // data: {title: 'app4', module: '/Vendor/List'}
+}, {
+  path: 'app3home',
+  component: App3Component,
 }];
 
 @NgModule({

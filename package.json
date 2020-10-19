@@ -24,7 +24,7 @@
     "@webcomponents/webcomponentsjs": "^2.4.4",
     "@worktile/planet": "^1.2.0",
     "micro-app3": "0.0.6",
-    "micro-app4": "0.0.3",
+    "micro-app4": "0.0.7",
     "ng-zorro-antd": "^9.3.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
