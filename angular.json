@@ -129,6 +129,86 @@
           }
         }
       }
+    },
+    "app3": {
+      "projectType": "library",
+      "root": "projects/app3",
+      "sourceRoot": "projects/app3/src",
+      "prefix": "zm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/app3/tsconfig.lib.json",
+            "project": "projects/app3/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/app3/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app3/src/test.ts",
+            "tsConfig": "projects/app3/tsconfig.spec.json",
+            "karmaConfig": "projects/app3/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app3/tsconfig.lib.json",
+              "projects/app3/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "app4": {
+      "projectType": "library",
+      "root": "projects/app4",
+      "sourceRoot": "projects/app4/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/app4/tsconfig.lib.json",
+            "project": "projects/app4/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/app4/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/app4/src/test.ts",
+            "tsConfig": "projects/app4/tsconfig.spec.json",
+            "karmaConfig": "projects/app4/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/app4/tsconfig.lib.json",
+              "projects/app4/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "app1",
